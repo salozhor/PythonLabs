@@ -14,7 +14,7 @@ def func4(x):
 	return 0
 	
 def func5(x):
-	return 2*x-1
+	return (12-6*x)/4
 
 def plotit(start, end, n):
 	x = np.arange(start, end, n)
@@ -22,12 +22,12 @@ def plotit(start, end, n):
 	y2 = np.array([func2(item) for item in x])
 	y3 = np.array([func3(item) for item in x])
 	y4 = np.array([func4(item) for item in x])
-	#y5 = np.array([func5(item) for item in x])
+	y5 = np.array([func5(item) for item in x])
 	plt.plot(x, y1, label = "4x1-3x2 >= 12")
 	plt.plot(x, y2, label = "-4x1+x2 >= -8")
 	plt.plot(x, y3, label = "4x1+x2 <= 8")
 	plt.plot(x, y4, label = "x2 <= 0")
-	#plt.plot(x, y5, label = "4x1 - 2x2 = 2")
+	plt.plot(x, y5, label = "^x1-4x2 = 12")
 	#line0 = plt.plot(x2, y2)
 	#setp(line0, linewidth=1, color='y')
 	
@@ -36,5 +36,5 @@ def plotit(start, end, n):
 	plt.legend()
 	plt.show()
 
-start, end, n = -100, 100, 1
+start, end, n = 1,4, 1
 plotit(start, end, n)
